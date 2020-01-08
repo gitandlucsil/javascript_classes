@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Curso Javascript</title>
+</head>
+<body>
+    <div id="app">
+    </div>
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var ulElement = document.createElement("ul");
+        for(let nome of nomes){
+            var liElement = document.createElement("li");
+            liElement.appendChild(document.createTextNode(nome));
+            ulElement.appendChild(liElement);
+        }
+        var containerElement = document.querySelector("#app");
+        containerElement.appendChild(ulElement);
+    </script>
+</body>
+</html>
