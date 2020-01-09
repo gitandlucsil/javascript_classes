@@ -8,7 +8,8 @@ function listar(){ //Funcao para listar todos os repositorios de um usuario
         var length = response.data.length; //Recebe a quantidade de repositorios do usuario
         console.log(response.data.length);
         if(length > 0){ //Se for maior que 0
-            var ulElement = document.createElement("ul"); //Cria um lista
+            var ulElement = document.querySelector("#app ul"); //Cria um lista
+            ulElement.innerHTML = ""; //Limpa a lista a cada requisicao
             for(var index = 0; index < length; index++){ //Percore todos os objetos JSON da reposta
                 var name_repo = response.data[index].name; //Armazena o nome de cada repositorio
                 console.log(name_repo);
